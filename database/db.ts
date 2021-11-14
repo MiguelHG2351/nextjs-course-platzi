@@ -1,3 +1,6 @@
+// Oh you curious...
+// This is not a real database,
+// But let's imagine it is one :)
 import allData from './data'
 
 class Database {

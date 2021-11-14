@@ -1,13 +1,17 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
+import 'semantic-ui-css/semantic.min.css'
+import '../global.css'
 
-import Layout from 'components/Layout'
+import CartProvider from '@store/Cart'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  // Aditional props
+  // Aditional layout
+  // Manejar errores - componentDidCatch
   return (
-    <Layout>
+    <CartProvider>
       <Component {...pageProps} />
-    </Layout>
+    </CartProvider>
   )
 }
 

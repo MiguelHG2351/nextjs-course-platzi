@@ -1,22 +1,20 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
-  }
-  render(){
+  render() {
     return (
-        <Html>
-            <Head>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-            </Head>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
+      <Html lang="en">
+        <Head>
+          {/** FavIcon */}
+          {/** WebFont */}
+          {/** stylesheets */}
+          {/** scripts */}
+        </Head>
+        <body className="my-body-class">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
     )
   }
 }
